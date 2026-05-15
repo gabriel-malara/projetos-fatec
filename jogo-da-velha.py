@@ -9,14 +9,18 @@ def exibir_jogo():
 
 def verificar_vitoria():
     for i in range(len(jogo)):
-        if jogo[0][i] == jogo[1][i] == jogo[2][i] and (jogo[0][i] == "X" or jogo[0][i] == "O"):
+        if jogo[0][i] == jogo[1][i] == jogo[2][i] and (jogo[0][i] != " "):
             print("Vitoria!")
-        if jogo[i][0] == jogo[i][1] == jogo[i][2] and (jogo[i][0] == "X" or jogo[i][0] == "O"):
+            return True
+        if jogo[i][0] == jogo[i][1] == jogo[i][2] and (jogo[i][0] != " "):
             print("Vitoria!")
-    if jogo[0][0] == jogo[1][1] == jogo[2][2] and (jogo[0][0] == "X" or jogo[0][0] == "O"):
+            return True
+    if jogo[0][0] == jogo[1][1] == jogo[2][2] and (jogo[0][0] != " "):
         print("Vitoria!")
-    if jogo[0][2] == jogo[1][1] == jogo [2][0] and(jogo[0][2] == "X" or jogo[0][2] == "O"):
-        print("Vitoria")
+        return True
+    if jogo[0][2] == jogo[1][1] == jogo [2][0] and(jogo[0][2] != " "):
+        print("Vitoria!")
+        return True
 
 while True:
     casa_desejada = int(input(f'Digite a casa que deseja ocupar ({jogador}): '))
@@ -42,6 +46,7 @@ while True:
             jogador = "O"
         else:
             jogador = "X"
-        verificar_vitoria()
+        if verificar_vitoria():
+            break
     else:
         print("Um erro ocorreu. Tente novamente.")
