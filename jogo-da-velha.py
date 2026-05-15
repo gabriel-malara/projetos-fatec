@@ -13,10 +13,10 @@ def verificar_vitoria():
             print("Vitoria!")
         if jogo[i][0] == jogo[i][1] == jogo[i][2] and (jogo[i][0] == "X" or jogo[i][0] == "O"):
             print("Vitoria!")
-        if jogo[0][0] == jogo[1][1] == jogo[2][2] and (jogo[0][0] == "X" or jogo[0][0] == "O"):
-            print("Vitoria!")
-        if jogo[0][2] == jogo[1][1] == jogo [2][0] and(jogo[0][2] == "X" or jogo[0][2] == "O"):
-            print("Vitoria")
+    if jogo[0][0] == jogo[1][1] == jogo[2][2] and (jogo[0][0] == "X" or jogo[0][0] == "O"):
+        print("Vitoria!")
+    if jogo[0][2] == jogo[1][1] == jogo [2][0] and(jogo[0][2] == "X" or jogo[0][2] == "O"):
+        print("Vitoria")
 
 while True:
     casa_desejada = int(input(f'Digite a casa que deseja ocupar ({jogador}): '))
