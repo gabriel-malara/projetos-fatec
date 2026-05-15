@@ -22,6 +22,18 @@ def verificar_vitoria():
         print("Vitoria!")
         return True
 
+'''
+1. Pegar todas as listas
+2. Verificar dados dentro das listas
+3. Comparar uns com os outros
+4. Checar se são iguais
+'''
+
+def verificar_empate():
+    if not any(" " in espacos for espacos in jogo):
+        print("Empate!")
+        return True
+
 while True:
     casa_desejada = int(input(f'Digite a casa que deseja ocupar ({jogador}): '))
     jogada_sucedida = False
@@ -46,7 +58,10 @@ while True:
             jogador = "O"
         else:
             jogador = "X"
+
         if verificar_vitoria():
+            break
+        if verificar_empate():
             break
     else:
         print("Um erro ocorreu. Tente novamente.")
