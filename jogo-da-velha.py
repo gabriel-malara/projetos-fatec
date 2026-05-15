@@ -21,14 +21,7 @@ def verificar_vitoria():
     if jogo[0][2] == jogo[1][1] == jogo [2][0] and(jogo[0][2] != " "):
         print("Vitoria!")
         return True
-
-'''
-1. Pegar todas as listas
-2. Verificar dados dentro das listas
-3. Comparar uns com os outros
-4. Checar se são iguais
-'''
-
+    
 def verificar_empate():
     if not any(" " in espacos for espacos in jogo):
         print("Empate!")
